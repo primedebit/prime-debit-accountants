@@ -1,0 +1,291 @@
+---
+const { title = "Prime Debit Accountants Ltd" } = Astro.props;
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Professional accountants for self-employed, sole traders and limited companies."
+    />
+  </head>
+
+  <body class="min-h-screen bg-[#070B14] text-slate-50 antialiased selection:bg-blue-500/30 selection:text-white">
+    <!-- soft background glow -->
+    <div class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-28 left-1/2 h-80 w-[900px] -translate-x-1/2 rounded-full bg-blue-600/18 blur-3xl"></div>
+      <div class="absolute top-40 right-[-160px] h-72 w-72 rounded-full bg-indigo-500/12 blur-3xl"></div>
+      <div class="absolute bottom-[-140px] left-[-160px] h-72 w-72 rounded-full bg-sky-500/10 blur-3xl"></div>
+    </div>
+
+    <!-- HEADER -->
+    <!-- HEADER (NOT STICKY – SCROLLS AWAY) -->
+<header class="relative z-40 border-b border-white/10 bg-[#070B14]/80 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-7xl items-center justify-between px-4 h-20">
+
+    <!-- BRAND -->
+    <a href="/" class="flex items-center gap-4">
+      <img
+        src="/logo.png"
+        alt="Prime Debit Accountants Ltd"
+        class="h-36 sm:h-38 w-auto max-w-[380px] object-contain
+               drop-shadow-[0_14px_30px_rgba(0,0,0,0.65)]"
+        loading="eager"
+      />
+    </a>
+
+    <!-- NAV -->
+    <nav class="hidden items-center gap-7 md:flex">
+      <a href="#services" class="text-sm font-semibold text-slate-300 hover:text-white transition">
+        Services
+      </a>
+      <a href="#reviews" class="text-sm font-semibold text-slate-300 hover:text-white transition">
+        Reviews
+      </a>
+      <a href="#contact" class="text-sm font-semibold text-slate-300 hover:text-white transition">
+        Contact
+      </a>
+
+      <a
+        href="#contact"
+        class="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-extrabold text-white
+               shadow-[0_18px_40px_rgba(37,99,235,0.35)]
+               hover:bg-blue-500 transition"
+      >
+        Book Free Consultation
+      </a>
+    </nav>
+  </div>
+</header>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button
+          class="md:hidden inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10 transition"
+          type="button"
+          aria-label="Open menu"
+          onclick="document.getElementById('mobileMenu')?.classList.toggle('hidden')"
+        >
+          Menu
+        </button>
+      </div>
+
+      <!-- MOBILE NAV (TOGGLE) -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-[#070B14]/90 backdrop-blur-xl">
+        <div class="mx-auto max-w-7xl px-4 py-4 flex flex-col gap-3">
+          <a href="#services" class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-200 hover:bg-white/5 hover:text-white transition">
+            Services
+          </a>
+          <a href="#reviews" class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-200 hover:bg-white/5 hover:text-white transition">
+            Reviews
+          </a>
+          <a href="#contact" class="rounded-xl px-3 py-2 text-sm font-semibold text-slate-200 hover:bg-white/5 hover:text-white transition">
+            Contact
+          </a>
+
+          <a
+            href="#contact"
+            class="mt-2 rounded-full bg-blue-600 px-5 py-3 text-center text-sm font-extrabold text-white
+                   shadow-[0_18px_40px_rgba(37,99,235,0.35)]
+                   hover:bg-blue-500 transition"
+          >
+            Book Free Consultation
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- PAGE -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10 bg-[#070B14]">
+  <div class="mx-auto max-w-7xl px-4 py-16">
+    <!-- TOP CTA -->
+    <div class="flex flex-col items-start justify-between gap-6 rounded-2xl border border-white/10 bg-white/5 p-8 md:flex-row md:items-center">
+      <h2 class="text-3xl font-extrabold tracking-tight text-white md:text-4xl">
+        Ready to make your accounts simple?
+        <span class="text-blue-400">Ask away.</span>
+      </h2>
+
+      <a
+        href="#contact"
+        class="inline-flex items-center justify-center rounded-full bg-blue-600 px-7 py-3 text-sm font-extrabold text-white
+               shadow-[0_18px_40px_rgba(37,99,235,0.35)] hover:bg-blue-500 transition"
+      >
+        Book Free Consultation
+      </a>
+    </div>
+
+    <!-- 4 COLUMNS -->
+    <div class="mt-14 grid gap-10 md:grid-cols-4">
+      <!-- COMPANY -->
+      <div>
+        <div class="flex items-center gap-3">
+          <img
+            src="/logo.png"
+            alt="Prime Debit Accountants Ltd"
+            class="h-10 w-auto object-contain drop-shadow-[0_10px_22px_rgba(0,0,0,0.6)]"
+            loading="lazy"
+          />
+          <div class="leading-tight">
+            <div class="font-extrabold text-white">Prime Debit</div>
+            <div class="text-sm font-semibold text-slate-300">Accountants Ltd</div>
+          </div>
+        </div>
+
+       <div class="mt-6 max-w-3xl text-xs leading-relaxed text-slate-400">
+  <p>
+    Prime Debit Accountants Ltd is registered in England and Wales.
+  </p>
+  <p class="mt-1">
+    Company Number: <span class="font-medium text-slate-300">16951790</span>
+  </p>
+</div>
+
+        <p class="mt-4 text-sm text-slate-300/80">
+          © {new Date().getFullYear()} Prime Debit Accountants Ltd
+        </p>
+      </div>
+
+      <!-- MAIN MENU -->
+      <div>
+        <h3 class="text-base font-bold text-white">Main menu</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li><a href="/" class="text-slate-300/80 hover:text-white transition">Home</a></li>
+          <li><a href="#services" class="text-slate-300/80 hover:text-white transition">Services</a></li>
+          <li><a href="#reviews" class="text-slate-300/80 hover:text-white transition">Reviews</a></li>
+          <li><a href="#contact" class="text-slate-300/80 hover:text-white transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- SERVICES -->
+      <div>
+        <h3 class="text-base font-bold text-white">Services</h3>
+        <ul class="mt-4 space-y-2 text-sm">
+          <li class="text-slate-300/80">Self Assessment</li>
+          <li class="text-slate-300/80">Bookkeeping</li>
+          <li class="text-slate-300/80">VAT Returns</li>
+          <li class="text-slate-300/80">Payroll</li>
+          <li class="text-slate-300/80">Limited Company Accounts</li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div>
+        <h3 class="text-base font-bold text-white">Contact us</h3>
+        <div class="mt-4 space-y-3 text-sm text-slate-300/80">
+          <p>Huddersfield • UK-wide</p>
+
+          <!-- Replace with your real details -->
+          <p>
+            <span class="text-slate-200">Email:</span>
+            <a href="mailto:info@primedebitaccountants.co.uk" class="text-blue-400 hover:text-blue-300 transition">
+              info@primedebitaccountants.co.uk
+            </a>
+          </p>
+
+          <p>
+            <span class="text-slate-200">WhatsApp:</span>
+            <a href="https://wa.me/447784287703" class="text-blue-400 hover:text-blue-300 transition">
+              +44 7784 287703
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM BAR -->
+    <div class="mt-14 flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
+      <div class="text-xs text-slate-300/70">
+        <a href="/privacy" class="hover:text-white transition">Privacy Policy</a>
+        <span class="px-2">|</span>
+        <a href="/terms" class="hover:text-white transition">Terms</a>
+        <span class="px-2">|</span>
+        <a href="/cookies" class="hover:text-white transition">Cookie Policy</a>
+      </div>
+
+      <!-- SOCIALS (only add what you have) -->
+      <!-- SOCIALS -->
+<div class="flex items-center gap-3">
+  <!-- WhatsApp -->
+  <a
+    href="https://wa.me/447784287703"
+    target="_blank"
+    aria-label="WhatsApp"
+    class="inline-flex h-10 w-10 items-center justify-center rounded-full
+           border border-white/10 bg-white/5
+           text-slate-200 hover:bg-green-500/20 hover:text-green-400 transition"
+  >
+    <svg viewBox="0 0 24 24" class="h-5 w-5 fill-current">
+      <path d="M20.52 3.48A11.86 11.86 0 0 0 12.04 0C5.42 0 .04 5.38.04 12a11.9 11.9 0 0 0 1.62 5.98L0 24l6.2-1.62A11.92 11.92 0 0 0 12 24h.01c6.62 0 12-5.38 12-12a11.86 11.86 0 0 0-3.49-8.52zm-8.51 18.5a9.86 9.86 0 0 1-5.03-1.38l-.36-.22-3.68.96.98-3.58-.23-.37A9.87 9.87 0 1 1 21.9 12a9.9 9.9 0 0 1-9.89 9.98zm5.43-7.45c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.93 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.59-.9-2.18-.24-.58-.48-.5-.66-.51h-.56c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.46 0 1.45 1.07 2.85 1.22 3.05.15.2 2.1 3.21 5.08 4.5.71.31 1.26.49 1.69.63.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a
+    href="https://www.instagram.com/primedebitaccountants/"
+    target="_blank"
+    aria-label="Instagram"
+    class="inline-flex h-10 w-10 items-center justify-center rounded-full
+           border border-white/10 bg-white/5
+           text-slate-200 hover:bg-pink-500/20 hover:text-pink-400 transition"
+  >
+    <svg viewBox="0 0 24 24" class="h-5 w-5 fill-current">
+      <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 16.5 12 4.51 4.51 0 0 0 12 7.5zm0 7.3A2.8 2.8 0 1 1 14.8 12 2.81 2.81 0 0 1 12 14.8zM17.6 6.3a1.05 1.05 0 1 0 1.05 1.05A1.05 1.05 0 0 0 17.6 6.3z"/>
+    </svg>
+  </a>
+</div>
+
+        <!-- LinkedIn -->
+        <a
+          href="#"
+          aria-label="LinkedIn"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5
+                 text-slate-200 hover:bg-white/10 hover:text-white transition"
+        >
+          <svg viewBox="0 0 24 24" class="h-5 w-5 fill-current" aria-hidden="true">
+            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 23.5h4V7.98h-4V23.5zM8.5 7.98h3.83v2.12h.05c.53-1 1.83-2.17 3.77-2.17 4.03 0 4.78 2.65 4.78 6.1v9.47h-4v-8.4c0-2-.04-4.58-2.79-4.58-2.8 0-3.23 2.18-3.23 4.44v8.54h-4V7.98z"/>
+          </svg>
+        </a>
+
+        <!-- Instagram -->
+        <a
+          href="#"
+          aria-label="Instagram"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5
+                 text-slate-200 hover:bg-white/10 hover:text-white transition"
+        >
+          <svg viewBox="0 0 24 24" class="h-5 w-5 fill-current" aria-hidden="true">
+            <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 16.5 12 4.51 4.51 0 0 0 12 7.5zm0 7.3A2.8 2.8 0 1 1 14.8 12 2.81 2.81 0 0 1 12 14.8zM17.6 6.3a1.05 1.05 0 1 0 1.05 1.05A1.05 1.05 0 0 0 17.6 6.3z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Mobile sticky CTA -->
+    <a
+      href="#contact"
+      class="fixed bottom-4 left-1/2 z-50 w-[92%] -translate-x-1/2 rounded-full bg-blue-600 px-5 py-3
+             text-center text-sm font-extrabold text-white
+             shadow-[0_18px_40px_rgba(37,99,235,0.35)]
+             hover:bg-blue-500 transition md:hidden"
+    >
+      Book Free Consultation
+    </a>
+
+    <!-- Smooth scrolling -->
+    <style is:global>
+      html { scroll-behavior: smooth; }
+    </style>
+  </body>
+</html>

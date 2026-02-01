@@ -1,0 +1,39 @@
+<section id="services" class="mx-auto max-w-6xl px-4 py-10 md:py-12">
+  <div class="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+    <div>
+      <p class="text-xs font-semibold tracking-wide text-slate-200/60">SERVICES</p>
+      <h2 class="text-3xl font-semibold tracking-tight md:text-[34px]">
+        Everything you need, handled properly
+      </h2>
+      <p class="mt-2 max-w-2xl text-slate-200/70 leading-relaxed">
+        From Self Assessment to company accounts — we’ll keep you compliant and in control.
+      </p>
+    </div>
+
+    <a
+      href="#contact"
+      class="mt-4 inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-bold text-white hover:bg-white/10 md:mt-0"
+    >
+      Book free consultation →
+    </a>
+  </div>
+
+  <div class="mt-6 grid gap-4 md:grid-cols-3">
+    {[
+      ["Tax Returns", "Self Assessment prepared accurately and filed on time."],
+      ["Bookkeeping", "Monthly or quarterly bookkeeping to keep everything organised."],
+      ["VAT Returns", "MTD-ready VAT registration and returns filed correctly."],
+      ["Payroll", "Payslips, RTI submissions and ongoing payroll support."],
+      ["Company Accounts", "Year-end accounts and Corporation Tax (CT600) support."],
+      ["Tax Advice", "Practical guidance to help keep things efficient and compliant."]
+    ].map(([title, desc]) => (
+      <article class="rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/7">
+        <h3 class="text-lg font-semibold">{title}</h3>
+        <p class="mt-2 text-slate-200/70 leading-relaxed">{desc}</p>
+        <a class="mt-5 inline-flex items-center gap-2 font-bold text-blue-300 hover:underline" href="#contact">
+          Learn more <span class="transition group-hover:translate-x-0.5">→</span>
+        </a>
+      </article>
+    ))}
+  </div>
+</section>
